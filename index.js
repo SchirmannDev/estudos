@@ -4,6 +4,7 @@ const javaScript = {
   paradigm: "00 and Functional",
 };
 
-console.log(Object.values(javaScript));
+console.log(Object.entries(javaScript));
 
-//values serve para mostras os valores
+//entries serve para mostrar par a par os valores
+// ex: name:'JavaScrip
