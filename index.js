@@ -1,17 +1,9 @@
-const javaScript = Object.create({});
-Object.assign(
-  javaScript,
-  {
-    name: "JavaScrip",
-    year: 1995,
-    paradigm: "00 and Functional",
-  },
-  {
-    author: "Brendan Eich",
-    influenceBy: "Java, Scheme and Self",
-  }
-);
+const javaScript = {
+  name: "JavaScrip",
+  year: 1995,
+  paradigm: "00 and Functional",
+};
 
-console.log(javaScript);
+console.log(Object.values(javaScript));
 
-//assing serve para atribuir mais descrições ao objeto principal
+//values serve para mostras os valores
