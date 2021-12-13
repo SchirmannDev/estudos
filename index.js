@@ -1,32 +1,23 @@
-const rectangle = {};
-Object.defineProperty(rectangle, "x", {
-  set(x) {
-    if (x > 0) {
-      this._x = x;
-    } else {
-      console.log("numero invalido");
-    }
+const person1 = {
+  name: "Linus Torvalds",
+  city: "Helsinki",
+  year: 1969,
+  getAge() {
+    return new Date().getFullYear() - this.year;
   },
-}),
-  Object.defineProperty(rectangle, "y", {
-    set(y) {
-      if (y > 0) {
-        this._y = y;
-      } else {
-        console.log("NUMERO INVALIDO");
-      }
-    },
-  });
+};
 
-Object.defineProperty(rectangle, "area", {
-  get() {
-    return this._x * this._y;
+const person2 = {
+  name: "Bill Gates",
+  city: "Seattle",
+  year: 1955,
+  getAge() {
+    return new Date().getFullYear() - this.year;
   },
-});
+};
 
-rectangle.x = -10;
-rectangle.y = -4;
+console.log(person1);
+console.log(person1.getAge());
 
-console.log(rectangle.area);
-
-// utilizando object.defineProperty
+console.log(person2);
+console.log(person2.getAge());
