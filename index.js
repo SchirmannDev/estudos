@@ -1,25 +1,22 @@
-const rectangle = {
-  set x(x) {
-    if (x > 0) {
-      this._x = x;
-    } else {
-      console.log("numero invalido");
-    }
+const rectangle = {};
+Object.defineProperty(rectangle, "x", {
+  set(x) {
+    this._x = x;
   },
-  set y(y) {
-    if (y > 0) {
+}),
+  Object.defineProperty(rectangle, "y", {
+    set(y) {
       this._y = y;
-    } else {
-      console.log("numero invalido");
-    }
-  },
-  get area() {
+    },
+  });
+
+Object.defineProperty(rectangle, "area", {
+  get() {
     return this._x * this._y;
   },
-};
-rectangle.x = -10;
-rectangle.y = -5;
+});
+
+rectangle.x = 10;
+rectangle.y = 4;
 
 console.log(rectangle.area);
-
-// utilizando gettere setter para tratamento de erros
