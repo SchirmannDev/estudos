@@ -1,10 +1,25 @@
-const javaScript = {
-  name: "JavaScrip",
-  year: 1995,
-  paradigm: "00 and Functional",
+const rectangle = {
+  set x(x) {
+    if (x > 0) {
+      this._x = x;
+    } else {
+      console.log("numero invalido");
+    }
+  },
+  set y(y) {
+    if (y > 0) {
+      this._y = y;
+    } else {
+      console.log("numero invalido");
+    }
+  },
+  get area() {
+    return this._x * this._y;
+  },
 };
+rectangle.x = -10;
+rectangle.y = -5;
 
-console.log(Object.entries(javaScript));
+console.log(rectangle.area);
 
-//entries serve para mostrar par a par os valores
-// ex: name:'JavaScrip
+// utilizando gettere setter para tratamento de erros
