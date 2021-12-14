@@ -1,8 +1,15 @@
-const createPerson = (name, city, year) => ({
-  name,
-  city,
-  year,
-});
+function fn1() {
+  let v1 = 10;
+  return {
+    m1() {
+      console.log(++v1);
+    },
+    m2() {
+      console.log(--v1);
+    },
+  };
+}
 
-const person = createPerson("Alan Kay", "Springfield", 1960);
-console.log(person);
+const obj1 = fn1();
+obj1.m1();
+obj1.m2();
