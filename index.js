@@ -1,10 +1,17 @@
-const obj1 = {};
-for (var v1 = 0; v1 < 3; v1++) {
-  obj1[v1] = function () {
-    console.log(this.v2);
-  }.bind({ v2: v1 });
+const Rectangle = function (x, y) {
+  this.x = x;
+  this.y = y;
+  this.calculateArea = function () {
+    if (this.x > 0 && this.y > 0) {
+      return this.x * this.y;
+    } else {
+      throw "Invalid value for x or y";
+    }
+  };
+};
+try {
+  const rectangle = new Rectangle(-10, -2);
+  console.log(rectangle.calculateArea());
+} catch (e) {
+  console.log(e);
 }
-
-obj1[0]();
-obj1[1]();
-obj1[2]();
